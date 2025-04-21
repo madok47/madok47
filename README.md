@@ -1,164 +1,86 @@
-# Hi there 👋 madok
+<h1 align="center">👩‍💻 Data Scientist | 📚 Math Teacher</h1>
 
-<h3>Here's my technology learning roadmap by half-year:</h3>
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Machine%20Learning-009688?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Visualization-ff69b4?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Mathematics-FFC107?style=for-the-badge&logo=academia&logoColor=black" />
+</p>
 
-<table>
-<tr>
-<td>
-<h4>2025 January to April</h4>
+---
 
-<div>
-<img src="assets/nuxt.svg" width="30"/>
-<img src="assets/vue.png" width="30"/>
-</div>
+## ✨ О себе
 
-</td>
-<td>
-    <ul>
-        <li>Nuxt.js (Vue3)</li>
-        <li>Vue.js (Vue2)</li>
-    </ul>
-</td>
-</tr>
+Привет!  
+Я — увлеченный **Data Scientist** и **Учитель математики**.  
+Моя страсть — находить закономерности в данных и помогать другим понимать сложные вещи простым языком.
 
-<tr>
-<td>
-<h4>2024 July to December</h4>
+- 🎯 **Специализация:** Анализ данных, Машинное обучение, Статистика
+- 🧮 **Опыт преподавания:** школьная и университетская математика
+- 🚀 Постоянно учусь и развиваюсь в области Data Science и AI
 
-<div>
-<img src="assets/nuxt.svg" width="30"/>
-<img src="assets/vue.png" width="30"/>
-<img src="assets/django.png" width="20"/>
-<img src="assets/go.png" width="50"/>
-</div>
+---
 
-</td>
-<td>
-    <ul>
-    <li>Nuxt.js (Vue3)</li>
-    <li>Vue.js (Vue2)</li>
-    <li>Advanced Django (message broker and background tasks)</li>
-    <li>Go</li>
-    </ul>
-</td>
-</tr>
+## 📂 Проекты
 
-<tr>
-<td>
-<h4>2024 January to June</h4>
+### 📊 [Анализ данных клиентов](https://github.com/yourusername/client-data-analysis)
+> **EDA** | **Python** | **Pandas** | **Seaborn**
 
-<div>
-<img src="assets/react.svg" width="30"/>
-<img src="assets/python-original.svg" width="30"/>
-<img src="assets/flutterio-icon.svg" width="30"/>
-<img src="assets/firebase-icon.svg" width="30"/>
-<img src="assets/figma-icon.svg" width="30"/>
-</div>
+- Провел исследовательский анализ поведения клиентов.
+- Выявил ключевые факторы, влияющие на покупательскую активность.
+- Визуализировал зависимости и паттерны.
 
-</td>
-<td>
-    <ul>
-    <li>React (Next.js)</li>
-    <li>FastAPI (Python)</li>
-    <li>Flutter (Dart)</li>
-    <li>more working with Firebase and Figma</li>
-    </ul>
-</td>
-</tr>
+---
 
-<tr>
-<td>
+### 🔮 [Предсказание оттока клиентов](https://github.com/yourusername/churn-prediction)
+> **Машинное обучение** | **Scikit-Learn** | **XGBoost**
 
-<h4>2023 July to December</h4>
-<div>
-<img src="assets/swift-original.svg" width="30"/>
-<img src="assets/firebase-icon.svg" width="30"/>
-<img src="assets/figma-icon.svg" width="30"/>
-</div>
+- Построил модель для предсказания оттока клиентов.
+- Провел подбор гиперпараметров для увеличения точности модели.
+- Достиг accuracy 89%.
 
-</td>
-<td>
-    <ul>
-    <li>iOS Development (Swift)</li>
-    <li>more working with Firebase and Figma</li>
-    </ul>
-</td>
-</tr>
+---
 
-<tr>
-<td>
+### 🧩 [Сегментация пользователей](https://github.com/yourusername/user-segmentation)
+> **Кластеризация** | **K-Means** | **PCA** | **Plotly**
 
-<h4>2023 January to June</h4>
-<div>
-<img src="assets/angular.svg" width="30"/>
-<img src="assets/typescript-original.svg" width="30"/>
-<img src="assets/android-original-wordmark.svg" width="30"/>
-<img src="assets/python-original.svg" width="40"/>
-<img src="assets/firebase-icon.svg" width="30"/>
-<img src="assets/figma-icon.svg" width="30"/>
-</div>
+- Разработал стратегию сегментации пользователей.
+- Применил метод главных компонент для снижения размерности.
+- Создал динамичные интерактивные графики.
 
-</td>
-<td>
-    <ul>
-    <li>Angular Framework (TypeScript)</li>
-    <li>Android Development</li>
-    <li>Django Framework (Python)</li>
-    <li>Learning Firebase and Figma</li>
-    </ul>
-</td>
-</tr>
+---
 
-<tr>
-<td>
+## 🛠️ Навыки
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue" />
+  <img src="https://img.shields.io/badge/Numpy-013243?style=for-the-badge&logo=numpy&logoColor=white" />
+  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" />
+  <img src="https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white" />
+  <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" />
+  <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" />
+  <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Visualization-FF6384?style=for-the-badge&logo=plotly&logoColor=white" />
+</p>
 
-<h4>2022 July to December</h4>
-<div>
-<img src="assets/python-original.svg" width="30"/>
-<img src="assets/javascript-original.svg" width="30"/>
-</div>
+---
 
-</td>
-<td>
-    <ul>
-    <li>Basics of Python</li>
-    <li>Javascript (Basics of Web-Development)</li>
-    </ul>
-</td>
-</tr>
+## 📈 GitHub Статистика
 
-</table>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&theme=radical" alt="GitHub Stats" />
+</p>
 
-🏛️ 3rd year, Kazakh-British Technical University
+---
 
+## 📫 Контакты
 
- 
-Hi there! I'm Madiyar
-Data Analyst | Math teacher 
- 
-About Me
-I'm a passionate data science student currently pursuing my Statistics and Data scaeins at Narxoz University. My journey into the world of data began with a curiosity about how data can drive decision-making and uncover hidden patterns. I love working on projects that challenge me to think critically and creatively.
-Skills
-•	Programming Languages: Python, R, SQL
+- ✉️ Email: snakeyt527@gmail.com
+- 💼 LinkedIn: www.linkedin.com/in/madiyardauyssov
 
-•	Data Analysis: Pandas, NumPy, Matplotlib, 
-•	Machine Learning: R caret package
-•	Data Visualization: Power BI
-•	Databases: PostgreSQL, MySQL
-•	Tools: Jupyter Notebook, Git, GitHub, RMarkdown
-Projects
-1.	Predicting Customer Churn
-o	Description: Developed a logistic regression model to predict which customers would churn from a telecommunications company.
-o	Technologies Used: R 
-o	Repository Link <insert repository>
-Education
-•	[Your University]
-o	[Degree/Major]
-o	[Year of Graduation]
-Certifications
-•	[Certification Name] - [Issuing Organization]
-•	[Certification Name] - [Issuing Organization]
-Contact Me
-•	Email: [your.email@example.com]
-•	LinkedIn: Your LinkedIn Profile
+---
+
+> _"Без данных ты просто человек с мнением."_  
+> — W. Edwards Deming
+
