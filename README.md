@@ -69,7 +69,7 @@
 ## 📈 GitHub Статистика
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&theme=radical" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api?username=madok47&show_icons=true&theme=radical" alt="GitHub Stats" />
 </p>
 
 ---
