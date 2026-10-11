@@ -1,6 +1,87 @@
 <!doctype html>
 <html lang="kk">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Бірқалып — айлықтан айлыққа дейін</title><link rel="stylesheet" href="style.css"></head>
-<body>
-<aside><a class="brand" href="#today"><span class="logo">б</span> бірқалып<span class="beta">beta</span></a><p class="aside-label">ЖЕКЕ ҚАРЖЫҢЫЗ</p><nav><button data-page="today">◉ <span>Бүгін</span></button><button data-page="transactions">⇄ <span>Операциялар</span></button><button data-page="plan">▦ <span>Айлық жоспары</span></button><button data-page="whatif">◇ <span>Сатып алсам ше?</span></button><button data-page="report">◴ <span>Есеп</span></button></nav><div class="aside-footer"><div class="leaf">✳</div><strong>Ақшаңызға — бірқалып.</strong><p>Әр күнге түсінікті жоспар.</p><small>Алғашқы прототип · KZT</small></div></aside>
-<main><header><div class="breadcrumb">Жеке бюджет <span>/</span> <b id="page-name">Бүгін</b></div><div class="header-right"><span id="date-label"></span><span class="avatar">М</span></div></header><div id="app"></div><footer>Деректер осы браузерде сақталады. Есеп енгізілген мәліметтерге сүйенеді.</footer></main><div id="toast" role="status"></div><dialog id="expense-dialog"><form id="expense-form"><div class="modal-head"><h2>Шығын қосу</h2><button type="button" class="icon-button" id="close-dialog" aria-label="Жабу">✕</button></div><p class="muted">Бір жазба — жаңарған күндік жоспар.</p><label>Сома, ₸<input name="amount" type="number" min="1" step="1" required placeholder="Мысалы, 2 500"></label><label>Санат<select name="category"></select></label><label>Күні<input name="date" type="date" required></label><label>Түсініктеме <span class="muted">(міндетті емес)</span><input name="note" maxlength="100" placeholder="Түскі ас"></label><button class="primary full" type="submit">Шығынды сақтау</button></form></dialog><script src="app.js"></script></body></html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#162b30" />
+    <meta
+      name="description"
+      content="Бірқалып: жеке қаржыңызға анық жоспар, отбасыңызға ортақ мақсат."
+    />
+    <title>Бірқалып — бірге де, өзің үшін де</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23307a61'/%3E%3Ctext x='9' y='30' font-size='30' fill='white'%3Eб%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="shell">
+      <aside class="sidebar">
+        <a class="brand" href="#overview"
+          ><span class="brand-mark">б</span>бірқалып<span class="badge ghost"
+            >beta</span
+          ></a
+        >
+        <div class="workspace-switch" aria-label="Бюджет кеңістігі">
+          <button class="mode active" data-mode="personal">Жеке</button
+          ><button class="mode" data-mode="shared">Ортақ <span>→</span></button>
+        </div>
+        <div class="nav-label" id="nav-label">МЕНІҢ КЕҢІСТІГІМ</div>
+        <nav id="nav" aria-label="Негізгі бөлімдер"></nav>
+        <div class="sidebar-bottom">
+          <div class="upgrade-card">
+            <span class="badge mint">BIR QALYP PLUS</span>
+            <h3>Жоспарыңды кеңейт.</h3>
+            <p>Тереңірек есеп. Көбірек мүмкіндік.</p>
+            <button class="btn light wide" data-action="pricing">
+              Тарифтерді көру →
+            </button>
+          </div>
+          <button class="profile" data-action="profile">
+            <span class="avatar">М</span
+            ><span
+              ><span class="profile-name" id="profile-name">Мадияр</span
+              ><span class="profile-meta" id="profile-meta"
+                >Free · жеке кеңістік</span
+              ></span
+            ><span>⌄</span>
+          </button>
+        </div>
+      </aside>
+      <main class="main">
+        <header class="topbar">
+          <div class="breadcrumb">
+            Менің қаржым <span>/</span> <b id="current-label">Шолу</b>
+          </div>
+          <div class="top-actions">
+            <span id="today-label"></span
+            ><button
+              class="icon-btn"
+              data-action="pricing"
+              aria-label="Жазылым тарифтері"
+            >
+              ✧</button
+            ><button
+              class="user-avatar"
+              data-action="profile"
+              aria-label="Профиль"
+            >
+              М
+            </button>
+          </div>
+        </header>
+        <div id="app"></div>
+        <footer class="app-footer">
+          Бірқалып · Ақшаңызға түсінікті жоспар.<span id="storage-label"
+            >Жеке деректер осы браузерде сақталады.</span
+          >
+        </footer>
+      </main>
+    </div>
+    <dialog id="modal" aria-labelledby="modal-title"></dialog>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <script src="vendor/qrcode.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
