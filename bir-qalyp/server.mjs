@@ -15,6 +15,28 @@ const PLAN_LIMITS = {
   family: { members: 6, goals: 50, wishes: 200 },
 };
 const STATIC = {
+  "/vendor/fonts/noto-sans-cyrillic-ext-wght-normal.woff2": [
+    "vendor/fonts/noto-sans-cyrillic-ext-wght-normal.woff2",
+    "font/woff2",
+  ],
+  "/vendor/fonts/noto-sans-cyrillic-wght-normal.woff2": [
+    "vendor/fonts/noto-sans-cyrillic-wght-normal.woff2",
+    "font/woff2",
+  ],
+  "/vendor/fonts/noto-sans-latin-ext-wght-normal.woff2": [
+    "vendor/fonts/noto-sans-latin-ext-wght-normal.woff2",
+    "font/woff2",
+  ],
+  "/vendor/fonts/noto-sans-latin-wght-normal.woff2": [
+    "vendor/fonts/noto-sans-latin-wght-normal.woff2",
+    "font/woff2",
+  ],
+  "/assets/brand-mark.svg": ["assets/brand-mark.svg", "image/svg+xml"],
+  "/vendor/fonts/manrope-latin-wght-normal.woff2": [
+    "vendor/fonts/manrope-latin-wght-normal.woff2",
+    "font/woff2",
+  ],
+
   "/": ["index.html", "text/html; charset=utf-8"],
   "/index.html": ["index.html", "text/html; charset=utf-8"],
   "/style.css": ["style.css", "text/css; charset=utf-8"],

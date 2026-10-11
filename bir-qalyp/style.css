@@ -1,9 +1,61 @@
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url(vendor/fonts/noto-sans-cyrillic-ext-wght-normal.woff2)
+    format("woff2");
+  unicode-range:
+    U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url(vendor/fonts/noto-sans-cyrillic-wght-normal.woff2) format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url(vendor/fonts/noto-sans-latin-ext-wght-normal.woff2) format("woff2");
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+    U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url(vendor/fonts/noto-sans-latin-wght-normal.woff2) format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: Manrope;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 800;
+  src: url("vendor/fonts/manrope-latin-wght-normal.woff2") format("woff2");
+}
+
 :root {
   color-scheme: light;
   --bg: #f7f8fa;
   --surface: #fff;
   --ink: #162b30;
-  --muted: #7a878a;
+  --muted: #637779;
   --green: #307a61;
   --green-dark: #215d49;
   --mint: #eaf4ed;
@@ -24,7 +76,7 @@ body {
   color: var(--ink);
   background: var(--bg);
   font:
-    14px/1.5 Inter,
+    15px/1.6 "Noto Sans",
     -apple-system,
     BlinkMacSystemFont,
     "Segoe UI",
@@ -99,8 +151,8 @@ h3 {
 h1 {
   margin-bottom: 10px;
   font-size: clamp(28px, 2.4vw, 36px);
-  font-weight: 730;
-  letter-spacing: -1.4px;
+  font-weight: 750;
+  letter-spacing: -1.15px;
 }
 h2 {
   margin-bottom: 0;
@@ -170,7 +222,7 @@ strong {
 }
 .brand .beta,
 .brand small {
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 0.6px;
   color: var(--muted);
   font-weight: 650;
@@ -195,7 +247,7 @@ strong {
   padding: 9px 5px;
   color: #81908a;
   background: transparent;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
 }
 .mode svg {
@@ -214,7 +266,7 @@ strong {
 .nav-label {
   margin: 0 12px 13px;
   color: #99a3a4;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 650;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -269,7 +321,7 @@ strong {
 .nav-item .badge {
   margin-left: auto;
   padding: 1px 5px;
-  font-size: 9px;
+  font-size: 12px;
 }
 .sidebar-bottom {
   margin-top: auto;
@@ -311,13 +363,13 @@ strong {
 .upgrade-card p {
   color: #7b8b77;
   margin: 0 0 14px;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.75;
 }
 .upgrade-card .btn {
   width: 100%;
   padding: 9px 8px;
-  font-size: 10px;
+  font-size: 12px;
   background: #fff;
   border-color: #e2e8dc;
   color: var(--green);
@@ -344,13 +396,13 @@ strong {
   flex-shrink: 0;
 }
 .profile-name {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 650;
 }
 .profile-meta {
   display: block;
   color: #96a09f;
-  font-size: 9px;
+  font-size: 12px;
   margin-top: 2px;
 }
 .profile .profile-menu {
@@ -376,7 +428,7 @@ strong {
   align-items: center;
   gap: 13px;
   color: #9aa3a5;
-  font-size: 11px;
+  font-size: 12px;
 }
 .breadcrumb .divider,
 .breadcrumb > span:not(#current-label) {
@@ -393,7 +445,7 @@ strong {
 }
 .top-actions .date {
   color: #899597;
-  font-size: 11px;
+  font-size: 12px;
 }
 .top-actions .icon-btn {
   position: relative;
@@ -432,7 +484,7 @@ strong {
   align-items: center;
   gap: 7px;
   margin: 0 0 11px;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 650;
   letter-spacing: 1.7px;
   text-transform: uppercase;
@@ -472,7 +524,7 @@ strong {
   border-radius: 10px;
   background: var(--surface);
   color: var(--ink);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 650;
   line-height: 1.45;
   text-decoration: none;
@@ -522,7 +574,7 @@ button.primary:hover:not(:disabled) {
 }
 .btn.small {
   min-height: 32px;
-  font-size: 10px;
+  font-size: 12px;
   padding: 7px 12px;
   border-radius: 8px;
 }
@@ -557,7 +609,7 @@ button.primary:hover:not(:disabled) {
   border: none;
   background: transparent;
   color: var(--green);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 650;
   text-decoration: none;
 }
@@ -577,7 +629,7 @@ button.primary:hover:not(:disabled) {
   border-radius: 7px;
   background: #f4f7f1;
   color: #708267;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 550;
   line-height: 1.4;
   white-space: nowrap;
@@ -665,7 +717,7 @@ button.primary:hover:not(:disabled) {
   align-items: center;
   gap: 9px;
   color: #b5c9c6;
-  font-size: 11px;
+  font-size: 12px;
 }
 .hero-label svg {
   width: 16px;
@@ -690,7 +742,7 @@ button.primary:hover:not(:disabled) {
 }
 .hero-subtitle {
   color: #90aea7;
-  font-size: 11px;
+  font-size: 12px;
   margin-bottom: 26px;
 }
 .hero-progress {
@@ -715,7 +767,7 @@ button.primary:hover:not(:disabled) {
   justify-content: space-between;
   gap: 20px;
   color: #8caaa2;
-  font-size: 10px;
+  font-size: 12px;
 }
 .hero-stats > div:last-child {
   text-align: right;
@@ -736,7 +788,7 @@ button.primary:hover:not(:disabled) {
   padding-top: 17px;
   border-top: 1px solid #ffffff13;
   color: #aec6b9;
-  font-size: 10px;
+  font-size: 12px;
 }
 .hero-foot svg {
   width: 14px;
@@ -768,7 +820,7 @@ button.primary:hover:not(:disabled) {
   align-items: center;
   gap: 12px;
   color: #86928e;
-  font-size: 11px;
+  font-size: 12px;
   padding: 10px 0;
 }
 .plan-row:first-child,
@@ -803,7 +855,7 @@ button.primary:hover:not(:disabled) {
   border-radius: 10px;
   background: #f6f8f3;
   color: #8a9880;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.7;
 }
 .plan-note svg,
@@ -829,7 +881,7 @@ button.primary:hover:not(:disabled) {
   background: #fff;
   color: #4e655c;
   text-align: left;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   box-shadow: var(--shadow);
 }
@@ -916,7 +968,7 @@ button.primary:hover:not(:disabled) {
   color: #9b8fac;
 }
 .stat-label {
-  font-size: 10px;
+  font-size: 12px;
   color: #8a9792;
   padding-right: 34px;
 }
@@ -940,7 +992,7 @@ button.primary:hover:not(:disabled) {
   gap: 4px;
   margin-top: 7px;
   color: #99a49c;
-  font-size: 9px;
+  font-size: 12px;
 }
 .stat-note.positive {
   color: #629076;
@@ -1002,13 +1054,13 @@ button.primary:hover:not(:disabled) {
 .tx-info strong {
   display: block;
   overflow-wrap: anywhere;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 650;
   color: #51605c;
 }
 .tx-note {
   margin-top: 3px;
-  font-size: 9px;
+  font-size: 12px;
   color: #9aa6a0;
   line-height: 1.5;
 }
@@ -1026,7 +1078,7 @@ button.primary:hover:not(:disabled) {
   display: block;
   margin-top: 4px;
   color: #a4aca7;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 400;
 }
 .tx-actions {
@@ -1054,26 +1106,26 @@ button.primary:hover:not(:disabled) {
 }
 .bill-row strong {
   color: #66766e;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 550;
 }
 .bill-row small {
   display: block;
   margin-top: 5px;
   color: #a3aca3;
-  font-size: 9px;
+  font-size: 12px;
 }
 .bill-row .bill-amount {
   color: #738170;
   text-align: right;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 550;
 }
 .empty-state {
   padding: 29px 12px 27px;
   text-align: center;
   color: #92a29a;
-  font-size: 11px;
+  font-size: 12px;
 }
 .empty-state h3 {
   color: #6b8175;
@@ -1126,7 +1178,7 @@ button.primary:hover:not(:disabled) {
   background: #bed1b4;
   color: #476b47;
   margin-left: -11px;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
 }
 .mini-avatar:first-child {
@@ -1159,7 +1211,7 @@ button.primary:hover:not(:disabled) {
 .banner-copy p {
   margin: 0;
   color: #8fa07f;
-  font-size: 10px;
+  font-size: 12px;
 }
 .banner-actions {
   display: flex;
@@ -1170,7 +1222,7 @@ button.primary:hover:not(:disabled) {
   background: #fff;
   color: #607f4e;
   border-color: #dde6d4;
-  font-size: 10px;
+  font-size: 12px;
   padding: 9px 13px;
 }
 .section-heading {
@@ -1251,7 +1303,7 @@ button.primary:hover:not(:disabled) {
   top: 11px;
   background: #ffffff80;
   border-color: #ffffff60;
-  font-size: 8px;
+  font-size: 12px;
 }
 .goal-body {
   padding: 17px 13px 11px;
@@ -1268,7 +1320,7 @@ button.primary:hover:not(:disabled) {
 .goal-meta {
   margin-bottom: 19px;
   color: #98a59b;
-  font-size: 9px;
+  font-size: 12px;
 }
 .goal-progress {
   height: 5px;
@@ -1288,7 +1340,7 @@ button.primary:hover:not(:disabled) {
   display: flex;
   justify-content: space-between;
   margin-top: 8px;
-  font-size: 10px;
+  font-size: 12px;
   color: #98a38f;
 }
 .goal-progress-meta strong {
@@ -1301,13 +1353,13 @@ button.primary:hover:not(:disabled) {
   align-items: center;
   padding-top: 16px;
   gap: 10px;
-  font-size: 10px;
+  font-size: 12px;
   color: #a2ad9c;
 }
 .goal-footer .btn {
   min-height: 30px;
   padding: 6px 11px;
-  font-size: 9px;
+  font-size: 12px;
 }
 .wish-card {
   background: #fff;
@@ -1363,7 +1415,7 @@ button.primary:hover:not(:disabled) {
 }
 .wish-description {
   color: #99a49e;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.8;
   min-height: 36px;
   margin: 0 0 16px;
@@ -1378,7 +1430,7 @@ button.primary:hover:not(:disabled) {
 }
 .wish-tags .badge {
   padding: 3px 7px;
-  font-size: 8px;
+  font-size: 12px;
 }
 .wish-footer {
   display: flex;
@@ -1393,10 +1445,10 @@ button.primary:hover:not(:disabled) {
   align-items: center;
   gap: 5px;
   color: #a0aba0;
-  font-size: 9px;
+  font-size: 12px;
 }
 .wish-footer .btn {
-  font-size: 9px;
+  font-size: 12px;
   min-height: 29px;
   padding: 5px 9px;
 }
@@ -1409,7 +1461,7 @@ button.primary:hover:not(:disabled) {
   border: 1px solid #e8ece2;
   border-radius: 8px;
   color: #8c9c7b;
-  font-size: 9px;
+  font-size: 12px;
 }
 .vote-btn svg {
   width: 12px;
@@ -1448,13 +1500,13 @@ button.primary:hover:not(:disabled) {
 }
 .form-section p {
   color: #94a097;
-  font-size: 10px;
+  font-size: 12px;
   margin-bottom: 20px;
 }
 label {
   display: block;
   color: #6e7d74;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   line-height: 1.5;
 }
@@ -1524,7 +1576,7 @@ select {
 .field-help {
   display: block;
   color: #a0aba0;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 400;
   margin-top: 7px;
   line-height: 1.7;
@@ -1539,7 +1591,7 @@ select {
 }
 .form-actions small {
   color: #a3ad9d;
-  font-size: 10px;
+  font-size: 12px;
 }
 .alert {
   display: flex;
@@ -1551,7 +1603,7 @@ select {
   border-radius: 12px;
   background: #f2f7ed;
   color: #7d9670;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.8;
 }
 .alert svg {
@@ -1597,7 +1649,7 @@ select {
 .advice-card p {
   margin: 0;
   color: #8b9e7b;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.85;
 }
 .advice-icon {
@@ -1631,7 +1683,7 @@ select {
   background: #fff;
   color: #879680;
   padding: 13px 14px;
-  font-size: 10px;
+  font-size: 12px;
 }
 .prompt:hover {
   border-color: #c7d8ba;
@@ -1656,7 +1708,7 @@ select {
   margin: 0 0 14px;
   border-radius: 14px;
   color: #72836c;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.9;
   overflow-wrap: anywhere;
   white-space: pre-wrap;
@@ -1680,7 +1732,7 @@ select {
 }
 .chat-message .message-label {
   display: block;
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.6px;
   text-transform: uppercase;
   color: #9bac8f;
@@ -1747,7 +1799,7 @@ select {
   color: #dce8d5;
 }
 .price-description {
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.85;
   color: #9ba694;
   min-height: 36px;
@@ -1775,7 +1827,7 @@ select {
 }
 .price-period {
   color: #a3af9b;
-  font-size: 10px;
+  font-size: 12px;
   margin-top: 4px;
 }
 .price-card.featured .price-period {
@@ -1794,7 +1846,7 @@ select {
   align-items: flex-start;
   gap: 9px;
   color: #86947b;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.65;
 }
 .features li svg {
@@ -1839,7 +1891,7 @@ select {
   border-radius: 20px;
   background: #d9eacb;
   color: #607f46;
-  font-size: 8px;
+  font-size: 12px;
   font-weight: 650;
   letter-spacing: 0.4px;
   white-space: nowrap;
@@ -1853,11 +1905,11 @@ select {
   background: #f3f6ef;
   color: #92a57c;
   border-radius: 10px;
-  font-size: 10px;
+  font-size: 12px;
 }
 .pricing-note {
   color: #9ca795;
-  font-size: 10px;
+  font-size: 12px;
   text-align: center;
   line-height: 1.85;
   max-width: 600px;
@@ -1878,7 +1930,7 @@ select {
   cursor: pointer;
 }
 .pricing-faq p {
-  font-size: 11px;
+  font-size: 12px;
   color: #9aa590;
   line-height: 1.8;
   margin: 12px 0 0;
@@ -1896,7 +1948,7 @@ select {
   justify-content: space-between;
   gap: 10px;
   color: #809275;
-  font-size: 11px;
+  font-size: 12px;
 }
 .report-row strong {
   color: #6b805a;
@@ -1904,7 +1956,7 @@ select {
 }
 .report-row small {
   color: #a2af99;
-  font-size: 9px;
+  font-size: 12px;
   margin-left: 5px;
 }
 .bar {
@@ -1949,7 +2001,7 @@ select {
   align-items: center;
   gap: 8px;
   color: #91a27f;
-  font-size: 10px;
+  font-size: 12px;
 }
 .report-legend i {
   display: block;
@@ -1976,7 +2028,7 @@ select {
 }
 .compare label {
   color: #98a58c;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 450;
 }
 .compare .big {
@@ -1988,7 +2040,7 @@ select {
 }
 .compare small {
   color: #a1ae92;
-  font-size: 9px;
+  font-size: 12px;
 }
 .members-list {
   display: grid;
@@ -2015,11 +2067,11 @@ select {
 .member-row strong {
   display: block;
   color: #7b9169;
-  font-size: 11px;
+  font-size: 12px;
 }
 .member-row small {
   color: #a5b196;
-  font-size: 9px;
+  font-size: 12px;
 }
 .invite-layout {
   display: grid;
@@ -2047,7 +2099,7 @@ select {
 }
 .invite-link {
   color: #93a37e;
-  font-size: 10px;
+  font-size: 12px;
 }
 .copy-row {
   display: flex;
@@ -2057,7 +2109,7 @@ select {
 }
 .copy-row input {
   margin: 0;
-  font-size: 10px;
+  font-size: 12px;
   color: #9ba98c;
   background: #f8faf4;
 }
@@ -2109,7 +2161,7 @@ select {
   margin: 0;
   min-height: 36px;
   padding: 9px 12px;
-  font-size: 10px;
+  font-size: 12px;
 }
 .filters input[type="search"] {
   flex: 1;
@@ -2125,7 +2177,7 @@ table {
 }
 th {
   color: #a3af96;
-  font-size: 9px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.6px;
   font-weight: 550;
@@ -2134,7 +2186,7 @@ th {
 }
 td {
   color: #819573;
-  font-size: 11px;
+  font-size: 12px;
   padding: 15px 14px;
   border-bottom: 1px solid #f0f3ec;
 }
@@ -2172,7 +2224,7 @@ tr:last-child td {
 .app-footer {
   color: #aab3ab;
   text-align: center;
-  font-size: 9px;
+  font-size: 12px;
   line-height: 1.8;
   margin: 0 auto;
   padding: 0 24px 25px;
@@ -2227,7 +2279,7 @@ dialog#modal::backdrop {
 }
 .modal-description {
   color: #9baa91;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.8;
   margin-bottom: 23px;
 }
@@ -2261,7 +2313,7 @@ dialog#modal::backdrop {
   border: 1px solid #ffffff10;
   border-radius: 11px;
   box-shadow: 0 8px 35px #18322c20;
-  font-size: 11px;
+  font-size: 12px;
   text-align: center;
   line-height: 1.65;
   opacity: 0;
@@ -2353,7 +2405,7 @@ dialog#modal::backdrop {
   .quick-action {
     padding: 13px 12px;
     gap: 9px;
-    font-size: 10px;
+    font-size: 12px;
   }
   .quick-action .action-icon {
     width: 28px;
@@ -2396,12 +2448,12 @@ dialog#modal::backdrop {
     margin-left: 192px;
   }
   .mode {
-    font-size: 10px;
+    font-size: 12px;
   }
   .nav-item {
     gap: 10px;
     padding: 12px 10px;
-    font-size: 11px;
+    font-size: 12px;
   }
   #app {
     padding: 26px 22px 35px;
@@ -2462,7 +2514,7 @@ dialog#modal::backdrop {
     height: 27px;
   }
   .stat-label {
-    font-size: 9px;
+    font-size: 12px;
     padding-right: 26px;
   }
   .stat-value {
@@ -2518,7 +2570,7 @@ dialog#modal::backdrop {
     border-radius: 10px;
   }
   .mode {
-    font-size: 10px;
+    font-size: 12px;
     padding: 8px 8px;
     gap: 5px;
   }
@@ -2556,7 +2608,7 @@ dialog#modal::backdrop {
     gap: 6px;
     padding: 7px 3px;
     border-radius: 9px;
-    font-size: 8px;
+    font-size: 12px;
     line-height: 1.3;
     color: #99a69c;
   }
@@ -2595,7 +2647,7 @@ dialog#modal::backdrop {
   }
   .breadcrumb {
     gap: 9px;
-    font-size: 9px;
+    font-size: 12px;
   }
   .top-actions {
     gap: 12px;
@@ -2611,7 +2663,7 @@ dialog#modal::backdrop {
     width: 28px;
     height: 28px;
     border-width: 2px;
-    font-size: 9px;
+    font-size: 12px;
   }
   #app {
     padding: 15px 20px 30px;
@@ -2622,7 +2674,7 @@ dialog#modal::backdrop {
     margin-bottom: 23px;
   }
   .eyebrow {
-    font-size: 8px;
+    font-size: 12px;
     letter-spacing: 1.4px;
     margin-bottom: 10px;
   }
@@ -2631,7 +2683,7 @@ dialog#modal::backdrop {
     letter-spacing: -1px;
   }
   .subtitle {
-    font-size: 10px;
+    font-size: 12px;
     line-height: 1.8;
   }
   .heading-actions {
@@ -2640,7 +2692,7 @@ dialog#modal::backdrop {
   }
   .heading-actions .btn {
     min-height: 36px;
-    font-size: 9px;
+    font-size: 12px;
     padding: 8px 11px;
     gap: 5px;
   }
@@ -2673,7 +2725,7 @@ dialog#modal::backdrop {
     border-radius: 20px;
   }
   .hero-label {
-    font-size: 10px;
+    font-size: 12px;
     gap: 7px;
   }
   .hero-money {
@@ -2685,21 +2737,21 @@ dialog#modal::backdrop {
     font-size: 29px;
   }
   .hero-subtitle {
-    font-size: 10px;
+    font-size: 12px;
     margin-bottom: 25px;
   }
   .hero-stats {
-    font-size: 9px;
+    font-size: 12px;
   }
   .hero-stats strong {
     font-size: 12px;
   }
   .hero-foot {
     margin-top: 21px;
-    font-size: 9px;
+    font-size: 12px;
   }
   .hero .badge {
-    font-size: 8px;
+    font-size: 12px;
     padding: 5px 7px;
   }
   .hero-decoration {
@@ -2718,7 +2770,7 @@ dialog#modal::backdrop {
     gap: 8px;
     padding: 15px 6px;
     min-height: 92px;
-    font-size: 9px;
+    font-size: 12px;
     border-radius: 12px;
     line-height: 1.5;
   }
@@ -2751,7 +2803,7 @@ dialog#modal::backdrop {
   }
   .stat-label {
     padding: 0;
-    font-size: 8px;
+    font-size: 12px;
     line-height: 1.7;
   }
   .stat-value {
@@ -2764,7 +2816,7 @@ dialog#modal::backdrop {
     letter-spacing: 0;
   }
   .stat-note {
-    font-size: 8px;
+    font-size: 12px;
     line-height: 1.5;
     margin-top: 6px;
   }
@@ -2787,15 +2839,15 @@ dialog#modal::backdrop {
   .mini-avatar {
     width: 31px;
     height: 31px;
-    font-size: 9px;
+    font-size: 12px;
     margin-left: -9px;
   }
   .banner-copy strong,
   .banner-copy h3 {
-    font-size: 11px;
+    font-size: 12px;
   }
   .banner-copy p {
-    font-size: 9px;
+    font-size: 12px;
   }
   .banner-actions {
     width: 100%;
@@ -2803,7 +2855,7 @@ dialog#modal::backdrop {
     padding-top: 7px;
   }
   .family-banner .btn {
-    font-size: 9px;
+    font-size: 12px;
     min-height: 32px;
     padding: 7px 12px;
   }
@@ -2828,33 +2880,33 @@ dialog#modal::backdrop {
   .goal-cover .badge {
     top: 8px;
     right: 7px;
-    font-size: 7px;
+    font-size: 12px;
     padding: 4px 5px;
   }
   .goal-body {
     padding: 13px 7px 8px;
   }
   .goal-title {
-    font-size: 11px;
+    font-size: 12px;
     gap: 5px;
   }
   .goal-meta {
-    font-size: 8px;
+    font-size: 12px;
     margin-bottom: 14px;
   }
   .goal-progress-meta {
-    font-size: 8px;
+    font-size: 12px;
     gap: 4px;
     flex-wrap: wrap;
   }
   .goal-footer {
     padding-top: 13px;
-    font-size: 8px;
+    font-size: 12px;
     gap: 5px;
     flex-wrap: wrap;
   }
   .goal-footer .btn {
-    font-size: 8px;
+    font-size: 12px;
     padding: 5px 8px;
     min-height: 27px;
   }
@@ -2881,7 +2933,7 @@ dialog#modal::backdrop {
     line-height: 1.5;
   }
   .wish-top .badge {
-    font-size: 7px;
+    font-size: 12px;
     padding: 4px 5px;
   }
   .wish-price {
@@ -2892,24 +2944,24 @@ dialog#modal::backdrop {
     font-size: 12px;
   }
   .wish-description {
-    font-size: 9px;
+    font-size: 12px;
     line-height: 1.75;
   }
   .wish-tags {
     gap: 4px;
   }
   .wish-tags .badge {
-    font-size: 7px;
+    font-size: 12px;
   }
   .wish-footer {
     flex-wrap: wrap;
     gap: 8px;
   }
   .wish-footer small {
-    font-size: 8px;
+    font-size: 12px;
   }
   .wish-footer .btn {
-    font-size: 8px;
+    font-size: 12px;
     padding: 5px 7px;
   }
   .form-grid {
@@ -2937,20 +2989,20 @@ dialog#modal::backdrop {
     min-width: 120px;
   }
   label {
-    font-size: 10px;
+    font-size: 12px;
   }
   .field-help {
-    font-size: 9px;
+    font-size: 12px;
   }
   .form-actions .btn {
-    font-size: 10px;
+    font-size: 12px;
   }
   .form-actions small {
     width: 100%;
-    font-size: 9px;
+    font-size: 12px;
   }
   .alert {
-    font-size: 10px;
+    font-size: 12px;
     padding: 13px 15px;
   }
   .tx-row {
@@ -2968,16 +3020,16 @@ dialog#modal::backdrop {
     height: 17px;
   }
   .tx-info strong {
-    font-size: 10px;
+    font-size: 12px;
   }
   .tx-note {
-    font-size: 8px;
+    font-size: 12px;
   }
   .tx-amount {
-    font-size: 10px;
+    font-size: 12px;
   }
   .tx-author {
-    font-size: 8px;
+    font-size: 12px;
   }
   .tx-actions .icon-btn {
     width: 24px;
@@ -3001,16 +3053,16 @@ dialog#modal::backdrop {
     gap: 14px;
   }
   .features li {
-    font-size: 11px;
+    font-size: 12px;
   }
   .price-card .btn {
-    font-size: 11px;
+    font-size: 12px;
   }
   .pricing-note {
-    font-size: 9px;
+    font-size: 12px;
   }
   .chat-message {
-    font-size: 11px;
+    font-size: 12px;
     max-width: 97%;
     padding: 14px 16px;
   }
@@ -3035,7 +3087,7 @@ dialog#modal::backdrop {
     font-size: 27px;
   }
   .compare label {
-    font-size: 9px;
+    font-size: 12px;
   }
   .invite-layout {
     grid-template-columns: 1fr;
@@ -3063,7 +3115,7 @@ dialog#modal::backdrop {
     font-size: 25px;
   }
   .app-footer {
-    font-size: 8px;
+    font-size: 12px;
     padding-bottom: 22px;
   }
   dialog#modal {
@@ -3076,7 +3128,7 @@ dialog#modal::backdrop {
     font-size: 20px;
   }
   .modal-description {
-    font-size: 10px;
+    font-size: 12px;
     margin-bottom: 19px;
   }
   #modal-form .form-grid {
@@ -3089,11 +3141,11 @@ dialog#modal::backdrop {
   }
   .modal-actions .btn {
     min-width: 90px;
-    font-size: 10px;
+    font-size: 12px;
   }
   #toast {
     bottom: calc(87px + env(safe-area-inset-bottom));
-    font-size: 10px;
+    font-size: 12px;
     padding: 12px 18px;
   }
 }
@@ -3115,7 +3167,7 @@ dialog#modal::backdrop {
     min-width: 144px;
   }
   .mode {
-    font-size: 9px;
+    font-size: 12px;
     padding: 8px 5px;
   }
   #app {
@@ -3132,7 +3184,7 @@ dialog#modal::backdrop {
   }
   .heading-actions .btn {
     padding: 8px 9px;
-    font-size: 8px;
+    font-size: 12px;
   }
   .card {
     padding: 20px;
@@ -3167,16 +3219,16 @@ dialog#modal::backdrop {
     font-size: 13px;
   }
   .goal-meta {
-    font-size: 10px;
+    font-size: 12px;
   }
   .goal-progress-meta {
-    font-size: 10px;
+    font-size: 12px;
   }
   .goal-footer {
-    font-size: 9px;
+    font-size: 12px;
   }
   .goal-footer .btn {
-    font-size: 9px;
+    font-size: 12px;
   }
   .wish-card {
     padding: 21px;
@@ -3185,11 +3237,11 @@ dialog#modal::backdrop {
     font-size: 14px;
   }
   .wish-description {
-    font-size: 10px;
+    font-size: 12px;
     min-height: auto;
   }
   .wish-footer .btn {
-    font-size: 9px;
+    font-size: 12px;
   }
   .tx-row {
     gap: 8px;
@@ -3198,7 +3250,7 @@ dialog#modal::backdrop {
     flex-direction: column;
   }
   .nav-item {
-    font-size: 7px;
+    font-size: 12px;
   }
   .compare .big {
     font-size: 24px;
@@ -3216,7 +3268,7 @@ dialog#modal::backdrop {
 /* Final UI components and HTML button semantics. */
 .brand > .badge {
   margin-left: -3px;
-  font-size: 8px;
+  font-size: 12px;
   color: #8e9a91;
   padding: 3px 4px;
   background: #f3f6f1;
@@ -3241,7 +3293,7 @@ dialog#modal::backdrop {
 }
 #today-label {
   color: #86948c;
-  font-size: 10px;
+  font-size: 12px;
 }
 .nav-new {
   margin-left: auto;
@@ -3259,7 +3311,7 @@ dialog#modal::backdrop {
   color: #c5d6bf;
   background: #ffffff0b;
   border-color: #ffffff19;
-  font-size: 9px;
+  font-size: 12px;
 }
 .hero .hero-label {
   width: 100%;
@@ -3275,7 +3327,7 @@ dialog#modal::backdrop {
   font-weight: 400;
   padding: 0;
   min-height: 20px;
-  font-size: 9px;
+  font-size: 12px;
   border: none;
 }
 .hero-link.btn:hover {
@@ -3287,7 +3339,7 @@ dialog#modal::backdrop {
   background: transparent;
   border: none;
   border-radius: 0;
-  font-size: 10px;
+  font-size: 12px;
   color: var(--green);
 }
 .budget-breakdown {
@@ -3300,7 +3352,7 @@ dialog#modal::backdrop {
   align-items: center;
   gap: 14px;
   color: #829187;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.6;
 }
 .budget-breakdown b {
@@ -3327,7 +3379,7 @@ dialog#modal::backdrop {
   border-radius: 10px;
   background: #f6f8f2;
   color: #91a083;
-  font-size: 9px;
+  font-size: 12px;
   line-height: 1.85;
 }
 .card-note svg {
@@ -3358,7 +3410,7 @@ dialog#modal::backdrop {
 }
 .bill-row > b {
   color: #6f8166;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 550;
   white-space: nowrap;
 }
@@ -3391,7 +3443,7 @@ dialog#modal::backdrop {
 .banner-copy > span {
   display: block;
   color: #90a17c;
-  font-size: 10px;
+  font-size: 12px;
 }
 .filter-tabs {
   display: flex;
@@ -3418,7 +3470,7 @@ dialog#modal::backdrop {
 .bill-edit > .badge {
   align-self: center;
   padding: 4px;
-  font-size: 8px;
+  font-size: 12px;
 }
 input:disabled {
   color: #a3af97;
@@ -3436,7 +3488,7 @@ input:disabled {
   color: #67875b;
 }
 .goal-meta span {
-  font-size: 10px;
+  font-size: 12px;
 }
 .goal-illustration {
   display: grid;
@@ -3465,7 +3517,7 @@ input:disabled {
   min-height: 29px;
   padding: 5px 8px;
   gap: 4px;
-  font-size: 10px;
+  font-size: 12px;
 }
 .vote-btn.selected {
   background: #edf5e6;
@@ -3481,7 +3533,7 @@ input:disabled {
 }
 .wish-tags .tx-author {
   margin: 0 0 0 auto;
-  font-size: 8px;
+  font-size: 12px;
 }
 .comparison-grid {
   display: grid;
@@ -3502,7 +3554,7 @@ input:disabled {
 .comparison-grid span {
   display: block;
   color: #96a787;
-  font-size: 9px;
+  font-size: 12px;
 }
 .comparison-grid strong {
   display: block;
@@ -3532,7 +3584,7 @@ input:disabled {
 }
 .forecast-col span {
   color: #91a57e;
-  font-size: 8px;
+  font-size: 12px;
   font-weight: 550;
   white-space: nowrap;
 }
@@ -3548,7 +3600,7 @@ input:disabled {
 }
 .forecast-col small {
   color: #a6b597;
-  font-size: 8px;
+  font-size: 12px;
 }
 .chat-messages {
   display: grid;
@@ -3557,7 +3609,7 @@ input:disabled {
 }
 .chat-message > span {
   display: block;
-  font-size: 8px;
+  font-size: 12px;
   text-transform: uppercase;
   color: #a0b092;
   margin-bottom: 7px;
@@ -3586,7 +3638,7 @@ input:disabled {
 }
 .advice-card .chat-form .btn {
   min-width: 91px;
-  font-size: 10px;
+  font-size: 12px;
   padding: 11px 12px;
 }
 .insight-card {
@@ -3604,7 +3656,7 @@ input:disabled {
 .insight-card p,
 .privacy-card p {
   color: #92a27f;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.85;
   margin-bottom: 0;
 }
@@ -3624,7 +3676,7 @@ input:disabled {
 }
 .price-card > p {
   color: #9ba694;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.85;
   min-height: 36px;
   margin-bottom: 22px;
@@ -3655,7 +3707,7 @@ input:disabled {
   place-items: center;
   margin-top: 1px;
   color: #8fa977;
-  font-size: 11px;
+  font-size: 12px;
   min-width: 13px;
 }
 .price-card.featured .features li > span {
@@ -3705,22 +3757,22 @@ input:disabled {
   }
   .hero-link.btn {
     margin-left: auto;
-    font-size: 8px;
+    font-size: 12px;
   }
   .budget-breakdown {
     gap: 16px;
   }
   .budget-breakdown > div {
-    font-size: 10px;
+    font-size: 12px;
   }
   .budget-breakdown b {
-    font-size: 11px;
+    font-size: 12px;
   }
   .budget-breakdown .breakdown-total b {
     font-size: 18px;
   }
   .card-note {
-    font-size: 9px;
+    font-size: 12px;
     line-height: 1.8;
   }
   .quick-action.btn {
@@ -3740,17 +3792,17 @@ input:disabled {
     margin-bottom: 10px;
   }
   .banner-copy > span {
-    font-size: 9px;
+    font-size: 12px;
   }
   .filter-tabs {
     gap: 5px;
   }
   .filter-tabs .btn {
     padding: 6px 9px;
-    font-size: 9px;
+    font-size: 12px;
   }
   .card-header > .btn {
-    font-size: 9px;
+    font-size: 12px;
   }
   .bill-edit {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 30px;
@@ -3776,7 +3828,7 @@ input:disabled {
     font-size: 12px;
   }
   .goal-meta span {
-    font-size: 9px;
+    font-size: 12px;
   }
   .goal-illustration {
     width: 60px;
@@ -3784,13 +3836,13 @@ input:disabled {
     font-size: 44px;
   }
   .goal-footer > span {
-    font-size: 8px;
+    font-size: 12px;
   }
   .wish-footer .btn {
-    font-size: 8px;
+    font-size: 12px;
   }
   .wish-tags .tx-author {
-    font-size: 8px;
+    font-size: 12px;
     margin-left: 0;
   }
   .comparison-grid {
@@ -3806,7 +3858,7 @@ input:disabled {
     gap: 10px;
   }
   .forecast-col span {
-    font-size: 7px;
+    font-size: 12px;
   }
   .price-card > p {
     min-height: 0;
@@ -3814,7 +3866,7 @@ input:disabled {
   .advice-card .chat-form .btn {
     min-width: 77px;
     padding: 10px;
-    font-size: 9px;
+    font-size: 12px;
   }
   .chat-form input {
     font-size: 16px;
@@ -3830,10 +3882,10 @@ input:disabled {
     gap: 9px;
   }
   .bill-row > b {
-    font-size: 10px;
+    font-size: 12px;
   }
   .app-footer > span {
-    font-size: 8px;
+    font-size: 12px;
   }
 }
 @media (max-width: 390px) {
@@ -3847,10 +3899,10 @@ input:disabled {
     font-size: 14px;
   }
   .goal-meta span {
-    font-size: 10px;
+    font-size: 12px;
   }
   .goal-footer > span {
-    font-size: 9px;
+    font-size: 12px;
   }
   .comparison-grid strong {
     font-size: 22px;
@@ -3867,7 +3919,7 @@ input:disabled {
 }
 .goal-management .text-link {
   color: #9cab8e;
-  font-size: 9px;
+  font-size: 12px;
   padding: 0;
 }
 .goal-management .text-link:hover {
@@ -3894,7 +3946,7 @@ input:disabled {
   }
   .wish-description {
     min-height: 0;
-    font-size: 10px;
+    font-size: 12px;
   }
   .wish-price {
     font-size: 24px;
@@ -3903,14 +3955,14 @@ input:disabled {
     margin-top: 17px;
   }
   .wish-tags .badge {
-    font-size: 8px;
+    font-size: 12px;
   }
   .wish-tags .tx-author {
     margin-left: auto;
-    font-size: 9px;
+    font-size: 12px;
   }
   .wish-footer .btn {
-    font-size: 9px;
+    font-size: 12px;
     padding: 6px 10px;
   }
   .wish-footer .icon-btn {
@@ -3925,6 +3977,239 @@ input:disabled {
     margin-top: 12px;
   }
   .goal-management .text-link {
-    font-size: 8px;
+    font-size: 12px;
+  }
+}
+
+/* Brand and readable type scale. All four scripts are self-hosted. */
+body {
+  font-family: "Noto Sans", "Segoe UI", system-ui, sans-serif;
+}
+.brand {
+  gap: 11px;
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: -1.2px;
+}
+.brand-mark {
+  background: none;
+  box-shadow: none;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+}
+.brand-mark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.brand-wordmark {
+  font-family: Manrope, "Noto Sans", sans-serif;
+  color: #173c34;
+}
+h1 {
+  font-weight: 750;
+}
+h2,
+h3 {
+  font-weight: 700;
+}
+.nav-item {
+  font-size: 14px;
+  font-weight: 650;
+}
+.nav-label {
+  font-size: 11px;
+  letter-spacing: 1.8px;
+  font-weight: 700;
+}
+.subtitle {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #617677;
+}
+.btn,
+.btn.text-link,
+.quick-action.btn,
+.family-banner .btn {
+  font-size: 13px;
+  font-weight: 700;
+}
+.hero-label,
+.hero-subtitle {
+  font-size: 14px;
+}
+.hero-subtitle {
+  color: #c2d9d2;
+}
+.hero-stats span {
+  font-size: 12px;
+  color: #b4cdc4;
+}
+.hero-stats strong {
+  font-size: 17px;
+  font-weight: 700;
+}
+.hero-foot,
+.hero-link.btn {
+  font-size: 12px;
+}
+.hero-money,
+.stat-value,
+.wish-price,
+.price,
+.tx-amount {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.6px;
+}
+.budget-breakdown > div {
+  font-size: 14px;
+  line-height: 1.6;
+}
+.budget-breakdown > div b {
+  font-size: 14px;
+  font-weight: 700;
+}
+.budget-breakdown .breakdown-total b {
+  font-size: 22px;
+}
+.card-note,
+.stat-note,
+.tx-note,
+.field-help,
+.app-footer,
+.tx-author,
+.profile-meta {
+  font-size: 12px;
+  line-height: 1.7;
+}
+.stat-label {
+  font-size: 13px;
+}
+.tx-info strong {
+  font-size: 14px;
+  font-weight: 700;
+}
+.tx-amount {
+  font-size: 14px;
+}
+.badge {
+  font-size: 11px;
+}
+@media (max-width: 1200px) and (min-width: 761px) {
+  .brand {
+    font-size: 24px;
+    gap: 8px;
+  }
+  .brand-mark {
+    width: 34px;
+    height: 34px;
+    flex-basis: 34px;
+  }
+}
+@media (max-width: 760px) {
+  .brand {
+    font-size: 25px;
+    gap: 10px;
+  }
+  .brand-mark {
+    width: 36px;
+    height: 36px;
+    flex-basis: 36px;
+  }
+  h1 {
+    font-size: 28px;
+    letter-spacing: -0.8px;
+    line-height: 1.3;
+  }
+  .subtitle {
+    font-size: 13px;
+  }
+  .nav-item {
+    font-size: 12px;
+    font-weight: 650;
+  }
+  .nav-item .label {
+    font-size: 11px;
+    letter-spacing: 0;
+  }
+  .hero-label,
+  .hero-subtitle {
+    font-size: 13px;
+  }
+  .hero-stats strong {
+    font-size: 15px;
+  }
+  .hero-foot {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+  .hero-link.btn {
+    font-size: 11px;
+  }
+  .budget-breakdown > div,
+  .budget-breakdown > div b {
+    font-size: 13px;
+  }
+  .btn,
+  .btn.text-link,
+  .quick-action.btn,
+  .family-banner .btn {
+    font-size: 12px;
+  }
+  .card-header {
+    flex-wrap: wrap;
+  }
+  .tx-info strong,
+  .tx-amount {
+    font-size: 13px;
+  }
+  .stat-label,
+  .stat-note {
+    font-size: 12px;
+  }
+  .quick-action.btn {
+    min-height: 75px;
+  }
+  .badge {
+    font-size: 11px;
+  }
+}
+@media (max-width: 760px) {
+  .stat-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .stat-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-height: 104px;
+    padding: 18px;
+  }
+  .stat-card > div {
+    flex: 1;
+    min-width: 0;
+  }
+  .stat-icon {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    margin: 0;
+  }
+  .stat-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+  .stat-label {
+    font-size: 13px;
+  }
+  .stat-value {
+    font-size: 23px;
+    margin: 2px 0;
+  }
+  .stat-note {
+    margin-top: 2px;
+    font-size: 12px;
   }
 }

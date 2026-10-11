@@ -4,6 +4,7 @@ WORKDIR /app
 RUN mkdir /data && chown node:node /data
 COPY --chown=node:node package.json server.mjs index.html app.js style.css ./
 COPY --chown=node:node vendor ./vendor
+COPY --chown=node:node assets ./assets
 USER node
 EXPOSE 3000
 VOLUME ["/data"]
