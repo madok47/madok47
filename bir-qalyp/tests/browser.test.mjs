@@ -119,6 +119,25 @@ test('browser: private budgets, real family collaboration, subscriptions and mob
     await screenshot(page, 'birqalyp-personal-desktop');
   });
 
+  await t.test('reopening keeps the selected space without changing budget records', async () => {
+    const page = await newPage();
+    const before = await personalState(page);
+    await page.locator('[data-mode="shared"]').click();
+    await navigate(page, 'wishes');
+    await page.reload({ waitUntil: 'networkidle' });
+    assert.equal(await page.locator('[data-mode="shared"]').getAttribute('aria-pressed'), 'true');
+    assert.equal(await page.locator('#nav .label').first().innerText(), 'Ортақ шолу');
+    assert.deepEqual(await personalState(page), before);
+    await page.locator('[data-mode="personal"]').click();
+    await page.reload({ waitUntil: 'networkidle' });
+    assert.equal(await page.locator('[data-mode="personal"]').getAttribute('aria-pressed'), 'true');
+    assert.deepEqual(await personalState(page), before);
+    await page.evaluate(() => localStorage.setItem('birqalyp-last-space', 'unknown'));
+    await page.reload({ waitUntil: 'networkidle' });
+    assert.equal(await page.locator('[data-mode="personal"]').getAttribute('aria-pressed'), 'true');
+    assert.deepEqual(await personalState(page), before);
+  });
+
   await t.test('Free gates CSV; Plus provides actual CSV and a forecast without charging or mutating money', async () => {
     const page = await newPage();
     await navigate(page, 'plan');
@@ -246,8 +265,9 @@ test('browser: private budgets, real family collaboration, subscriptions and mob
     await new Promise(resolve => server.close(resolve));
     server = await createBudgetServer({ dataDir, aiKey: '' });
     await listen();
-    await umida.reload({ waitUntil: 'networkidle' });
-    await umida.locator('[data-mode="shared"]').click();
+    await umida.reload({ waitUntil: 'domcontentloaded' });
+    await umida.waitForFunction(() => document.querySelector('#profile-name')?.textContent === 'Умида');
+    assert.equal(await umida.locator('[data-mode="shared"]').getAttribute('aria-pressed'), 'true');
     await navigate(umida, 'wishes');
     assert.match(await umida.locator('.wish-card').innerText(), /Сатып алынды/);
     assert.deepEqual((await sharedState(owner)).wishes, beforeRestart.wishes);

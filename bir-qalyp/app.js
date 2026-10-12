@@ -238,10 +238,23 @@ try {
 } catch {
   group = demoGroup();
 }
+const SPACE_KEY = "birqalyp-last-space";
+function lastSpace() {
+  try {
+    return localStorage.getItem(SPACE_KEY) === "shared" ? "shared" : "personal";
+  } catch {
+    return "personal";
+  }
+}
+function rememberSpace() {
+  try {
+    localStorage.setItem(SPACE_KEY, mode);
+  } catch {}
+}
 let token = localStorage.getItem("birqalyp-session") || "",
   serverAvailable = false,
   live = false,
-  mode = "personal",
+  mode = lastSpace(),
   page = "overview",
   filter = "all",
   chat = [],
@@ -546,6 +559,7 @@ function aiView() {
   );
 }
 function render() {
+  rememberSpace();
   const title =
     menu[mode].find((x) => x[0] === page)?.[1] ||
     (page === "pricing"
